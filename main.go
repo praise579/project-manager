@@ -1,10 +1,6 @@
 package main
 
-import (
-	"github.com/praise579/project-manager/config"
-)
-
-
 func main() {
-	config.PrintConfig()
+	//byte, _ := json.Marshal(config.Conf)
+	//fmt.Println(string(byte))
 }

@@ -1,13 +1,13 @@
 service:
   mode: debug
-  port: 9999
-database:
+  port: 888
+db:
   db-type: mysql
-  db-name: project_manager
   host: 127.0.0.1
   port: 3306
   username: root
-  password:
+  password: root
+  database: project_manager
 minio:
   endpoint: 127.0.0.1:9001
   access-Key: VZxH6MUmKkg8uKiAVh48
