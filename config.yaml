@@ -7,7 +7,11 @@ database:
   host: 127.0.0.1
   port: 3306
   username: root
-  password:
+  password: root
+  max-idle-conns: 10
+  max-open-conns: 200
+  string-size: 256
+  log-level: info
 minio:
   endpoint: 127.0.0.1:9001
   access-Key: VZxH6MUmKkg8uKiAVh48
