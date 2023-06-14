@@ -16,3 +16,9 @@ minio:
   endpoint: 127.0.0.1:9001
   access-Key: VZxH6MUmKkg8uKiAVh48
   secret-key: PDXSIQNG2KQIGGY919nVWENmMS1wzPUlNFH52IAd
+zap:
+  level: info
+  max-size: 100
+  max-age: 30
+  max-backups: 10
+  compress: true

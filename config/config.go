@@ -12,6 +12,7 @@ type Config struct {
 	Service  *Service  `mapstructure:"service" json:"service"`
 	Database *Database `mapstructure:"database" json:"database"`
 	Minio    *Minio    `mapstructure:"minio" json:"minio"`
+	Log      *Log      `mapstructure:"log" json:"log"`
 }
 
 func init() {

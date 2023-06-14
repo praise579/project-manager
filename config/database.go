@@ -2,11 +2,11 @@ package config
 
 import (
 	"fmt"
+	"github.com/praise579/project-manager/model/system"
 	"log"
 	"os"
 	"time"
 
-	"github.com/praise579/project-manager/model/system"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -33,7 +33,7 @@ func init() {
 	switch cdb.DbType {
 	case "mysql":
 		DB = cdb.openMysql()
-		DB.Set("gorm:table_options", "ENGINE=InnoDB").AutoMigrate(&system.SysUser{})
+		DB.Set("gorm:table_options", "ENGINE=InnoDB")
 	default:
 		panic("Unrecognized db type")
 	}
@@ -90,4 +90,10 @@ func (d *Database) logConfig() (l logger.Interface) {
 		},
 	)
 	return
+}
+
+func doMigrate() {
+	DB.AutoMigrate(
+		&system.SysUser{},
+	)
 }
